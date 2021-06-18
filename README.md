@@ -12,5 +12,7 @@ This project uses neural networks (CNN, Resnet18) to realize street view charact
      - Training data set: 3w photos
      - Validation data set: 1w photos
      - Test data set: 4w photos
+
+     
 ![data](img/data.png)
     

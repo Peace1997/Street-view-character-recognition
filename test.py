@@ -36,11 +36,11 @@ def predict(data):
         num_workers=2,
     )
     model = Model_Resnet().to(device)
-    model.load_state_dict(torch.load('./model2.pt'))
+    model.load_state_dict(torch.load('model/resnet_model.pt'))
     output = model.predict(test_loader,device)
     print(output)
 
-image = Image.open("000056.png")
+image = Image.open('img/000056.png')
 predict(image)
 
 # test cnn

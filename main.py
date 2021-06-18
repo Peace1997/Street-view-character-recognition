@@ -28,8 +28,8 @@ if __name__ == '__main__':
 
     loss_func = nn.CrossEntropyLoss(size_average=False)
     optimizer = torch.optim.Adam(model.parameters(), 0.001)
-    # if (os.path.exists('./model2.pt')):
-    #     model.load_state_dict(torch.load('./model2.pt'))
+    # if (os.path.exists('./resnet_model.pt')):
+    #     model.load_state_dict(torch.load('./resnet_model.pt'))
     for epoch in range(epochs):
 
         print('Epoch:', epoch)
@@ -45,4 +45,4 @@ if __name__ == '__main__':
         print("train_loss:",train_loss,"val_loss:",val_loss)
         if val_loss < best_loss:
             best_epoch,best_loss = epoch,val_loss
-            torch.save(model.state_dict(), './model2.pt')
+            torch.save(model.state_dict(), './resnet_model.pt')
